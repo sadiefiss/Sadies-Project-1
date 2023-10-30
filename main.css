@@ -1,7 +1,8 @@
-backround color: 
+
 
 * {
     box-sizing: border-box;
+  
 }
 
 
@@ -12,14 +13,14 @@ body {
     font-family: fantasy;
     font-size: 16px;
    
-} 
+   
+}  
 
 h1 {
 
-
 } 
 
-h3 {
+h2 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 font-style: oblique;
 
@@ -34,14 +35,53 @@ ul{
 }
 
 
-button{
+button {
     font-size: 1rem;
     line-height: 1em;
     padding: 1.5rem;
     background-color: rgb(255, 220, 239)
-    color: paleturquoise;
+    color paleturquoise;
     border: 0;
     border-radius: .7rem;
     transition: background-color 2s cubic-bezier(0.075, 0.82, 0.165, 1);
 
-}
+
+} 
+
+div {
+    border:  solid 3px;
+    padding: 1rem;
+    max-width: 75%;
+   
+} 
+
+
+ 
+
+
+main {
+    border:  solid 3px;
+    padding: 1rem;
+    max-width: 75%;
+    display: grid;
+
+
+.wrapper{
+    display: grid;
+    justify-content: space-around;
+} 
+
+.butttonwrapper{
+    display: grid;
+    justify-content: space-around;
+} 
+
+
+.div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px; 

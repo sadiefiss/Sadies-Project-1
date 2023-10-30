@@ -6,28 +6,41 @@
     <title>Poem Generator</title>
     <link rel="stylesheet" href="main.css">
     <script src="app.js" defer></script>
-</head>
+</head> 
+<div class="ui grid container">
+
+    
 <body> 
 
    <header>  
     <h1 class= "game-title"> Poem Generator</h1>
     </header> 
-   
+
 <main class="container">
-    <h3>Enter your words below;</h3>
+    <h2>Enter your words below;</h2>
     <section id = "input-list">
-    <ul>
+    <ul class= "wrapper">
         <li> <input type="text" id="emotion" name="emotion" placeholder="emotion"></li>
-        <li><input type ="text" id="verb" name="verb" placeholder="verb"></li>
+        <li><input type ="text" id="verb" name="verb" placeholder="verb ending in 'ing'"></li>
         <li> <input type ="text" id="adjective" placeholder="adjective"></li> 
         <li> <input type ="text" id="noun" placeholder="noun"></li>
-        <li> <input type ="text" id="noun" placeholder="noun"></li>
+        <li> <input type ="text" id="noun" placeholder="adjective"></li>
     </ul> 
 </section>
-   <footer>
-    <button type="button">Generate your Poem</button>
+
+
+<footer>
+    <button type="button" class="wrapper">Generate your Poem</button> 
+<h3>
+
+   <p id="poem-result">
+    //do poem in javascript to randomize the poem parts
+       "I felt _____ as I watched myself ___ing down the ___ path. A ___ saw me  on my way. It is time of the season I can let my self be ___"
+    </p>
+</h3>
    </footer>
-   
-    </main>
+    </main>  
+    </div>
+
 </body>
 </html>
