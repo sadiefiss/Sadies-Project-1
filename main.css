@@ -1,10 +1,47 @@
+backround color: 
+
+* {
+    box-sizing: border-box;
+}
+
+
 body {
 
-
-
+    min-height: 100vh;
+    background-color: plum;
+    font-family: fantasy;
+    font-size: 16px;
+   
 } 
 
 h1 {
 
-    
+
+} 
+
+h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-style: oblique;
+
+}
+
+ul{ 
+    background-color: rgb(160, 221, 179);  
+    font-family: fantasy;
+    font-size: 20px 
+
+
+}
+
+
+button{
+    font-size: 1rem;
+    line-height: 1em;
+    padding: 1.5rem;
+    background-color: rgb(255, 220, 239)
+    color: paleturquoise;
+    border: 0;
+    border-radius: .7rem;
+    transition: background-color 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
 }

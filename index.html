@@ -4,10 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Poem Generator</title>
-    <link rel="stylesheet" href="css/style.css">
-    <script src="./js/main.js" defer></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="app.js" defer></script>
 </head>
-<body>
-    
+<body> 
+
+   <header>  
+    <h1 class= "game-title"> Poem Generator</h1>
+    </header> 
+   
+<main class="container">
+    <h3>Enter your words below;</h3>
+    <section id = "input-list">
+    <ul>
+        <li> <input type="text" id="emotion" name="emotion" placeholder="emotion"></li>
+        <li><input type ="text" id="verb" name="verb" placeholder="verb"></li>
+        <li> <input type ="text" id="adjective" placeholder="adjective"></li> 
+        <li> <input type ="text" id="noun" placeholder="noun"></li>
+        <li> <input type ="text" id="noun" placeholder="noun"></li>
+    </ul> 
+</section>
+   <footer>
+    <button type="button">Generate your Poem</button>
+   </footer>
+   
+    </main>
 </body>
 </html>
