@@ -2,7 +2,7 @@
 
 * {
     box-sizing: border-box;
-  
+  border: 2px violet
 }
 
 
@@ -12,13 +12,36 @@ body {
     background-color: plum;
     font-family: fantasy;
     font-size: 16px;
-   
-   
+    display: flex;
+   align-items: center;
+   justify-content: center;
 }  
+ 
+.flex-parent {
+    display: flex;
+    border: 3px purple dashed;
+    width: 100%;
+    justify-content: space-between;
+    flex-direction:column;
+    align-items: center;
+    padding: 24px;
+}
 
-h1 {
 
-} 
+.inner{
+    background-color: aqua;
+    width: 100%;
+    min-height: 100px;
+}
+
+.flex ul {
+width: 100%;
+align-items: center;
+background-color: rgb(160, 221, 179); 
+     font-family: fantasy;
+    font-size: 20px 
+}
+
 
 h2 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -26,34 +49,19 @@ font-style: oblique;
 
 }
 
-ul{ 
-    background-color: rgb(160, 221, 179);  
-    font-family: fantasy;
-    font-size: 20px 
 
 
-}
 
-
-button {
+.flex button {
     font-size: 1rem;
     line-height: 1em;
     padding: 1.5rem;
     background-color: rgb(255, 220, 239)
     color paleturquoise;
-    border: 0;
-    border-radius: .7rem;
-    transition: background-color 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+    
+ 
 
-
-} 
-
-div {
-    border:  solid 3px;
-    padding: 1rem;
-    max-width: 75%;
-   
-} 
 
 
  
@@ -62,26 +70,14 @@ div {
 main {
     border:  solid 3px;
     padding: 1rem;
-    max-width: 75%;
+    max-width: 100%;
     display: grid;
-
+}
 
 .wrapper{
     display: grid;
-    justify-content: space-around;
-} 
-
-.butttonwrapper{
-    display: grid;
-    justify-content: space-around;
+    justify-content: center;
 } 
 
 
-.div{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
-    width: 100px;
-    height: 100px; 
+
