@@ -1,41 +1,47 @@
-console.log("js loaded")
+//console.log("js loaded")
 
 
 
 //constants-
+const playerInputs = { emotion: [],
+        verb: [],
+        adjective1: [],
+        noungit: [] ,
+        adjective2:[]
 
-const firstPoem  = {  line1: "I felt",
-                      emotion:"",
-                      line2: "as I watched myself",
-                      verbIng:"",
-                      line3: "down the ",
-                      adjective:"",
-                      line3:"Path. A",
-                      noun:"",
-                      line4: "saw me on my way. It is time of the season I can let my self be",
-                      adjective2:"",
+}; 
 
-
-
-
+function generatePoem() {
+    const emotion = document.getElementById('emotion').value
+    const verb = document.getElementById('verb').value 
+    const adjective1 = document.getElementById('adjective1').value 
+    const noun1 = document.getElementById('noun1').value
+    const adjective2 = document.getElementById(adjective2).value
 }
 
 
-//startervariables -states the data that will change while the game is running
+const poem = `I felt ${emotion} as I watched myself ${verb} 
+down the ${adjective1} path. A ${noun} saw me on my way. It is the time of the season I can let 
+myself be ${adjective2}.`;
+
+const poemResult = document.getElementById('poem-result');
+poemResult.textContent = poem;
 
 
 
 
 
-//cache elements
+
+
+
 
 
 
 //event listeners 
-document.getElementById("buttonGen").addEventListener("click", generatePoem);
-
-//functions
-function generatePoem(){ 
+const genertateButton = document.getElementById('buttonGen'); 
+genertateButton.addEventListener('click', generatePoem); 
 
 
-}
+
+
+  
