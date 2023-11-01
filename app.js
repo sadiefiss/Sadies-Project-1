@@ -1,8 +1,12 @@
-//console.log("js loaded")
 
+// Const - random word array
+const emotionWords = ["Disgust", "curious", "nostalgia", "passionate", "wonder"];
+const verbWords = ["provide", "laugh", "forget", "imagine", "dance"];
+const adjective1Words = ["secretive", "vibrant", "vapid", "whimsical", "grow"];
+const nounWords = ["Mcdonalds", "dreams", "John Stamos", "horse", "pants"];
+const adjective2Words = ["bumpy", "fantastic", "glossy", "strong", "fluttery"];
 
-
-//constants-
+// Object for user inputs
 const playerInputs = {
     emotionArray: [],
     verbArray: [],
@@ -11,66 +15,62 @@ const playerInputs = {
     adjective2Array: []
 };
 
-function generatePoem() {
-const emotion = document.getElementById('emotion').value;
-    const verb = document.getElementById('verb').value;
-    const adjective1 = document.getElementById('adjective1').value;
-    const noun = document.getElementById('noun').value;
-    const adjective2 = document.getElementById('adjective2').value;
+// Function  
+function getRandomWord(wordArray) {
+    const randomIndex = Math.floor(Math.random() * wordArray.length);
+    return wordArray[randomIndex];
+}
 
+// Function to display poem
+function generatePoem() {
+    let emotion = document.getElementById('emotion').value;
+    let verb = document.getElementById('verb').value;
+    let adjective1 = document.getElementById('adjective1').value;
+    let noun = document.getElementById('noun').value;
+    let adjective2 = document.getElementById('adjective2').value;
+
+    
+    if (!emotion || !verb || !adjective1 || !noun || !adjective2) {
+        emotion = getRandomWord(emotionWords);
+        verb = getRandomWord(verbWords);
+        adjective1 = getRandomWord(adjective1Words);
+        noun = getRandomWord(nounWords);
+        adjective2 = getRandomWord(adjective2Words);
+    }
+
+    // Store user inputs in the playerInputs object
     playerInputs.emotionArray.push(emotion);
     playerInputs.verbArray.push(verb);
     playerInputs.adjective1Array.push(adjective1);
     playerInputs.nounArray.push(noun);
     playerInputs.adjective2Array.push(adjective2);
 
-//playerInputs.emotionArray.push("some  emotion");
-//playerInputs.verbArray.push("some verb");
-//playerInputs.adjective1Array.push("some adjective1");
-//playerInputs.nounArray.push("some noun1");
-//playerInputs.adjective2Array.push("some adjective2");
+    // Array of poem templates
+    const poems = [
+        `I felt ${playerInputs.emotionArray[0]} as I watched myself ${playerInputs.verbArray[0]} down the ${playerInputs.adjective1Array[0]} path. A ${playerInputs.nounArray[0]} saw me on my way. It is the time of the season I can let myself be ${playerInputs.adjective2Array[0]}.`,
+        // Add more poem templates here
+    ];
 
+    // Gen  random poem
+    const poemNumber = Math.floor(Math.random() * poems.length);
+    const poemResult = document.getElementById('poem-result');
+    poemResult.textContent = poems[poemNumber];
 
-const poem = `I felt ${playerInputs.emotionArray[0]} as I watched myself ${playerInputs.verbArray[0]} 
-down the ${playerInputs.adjective1Array[0]} path. A ${playerInputs.nounArray[0]} saw me on my way. It is the time of the season I can let 
-myself be ${playerInputs.adjective2Array[0]}.`;
+    // Reset input fields
+    document.getElementById('emotion').value = '';
+    document.getElementById('verb').value = '';
+    document.getElementById('adjective1').value = '';
+    document.getElementById('noun').value = '';
+    document.getElementById('adjective2').value = '';
 
-const poemResult = document.getElementById('poem-result');
-poemResult.textContent = poem;
-
-//reset input
-document.getElementById('emotion').value
-document.getElementById('verb').value 
-document.getElementById('adjective1').value
-document.getElementById('noun').value 
-document.getElementById('adjective2').value
-
-
-playerInputs.emotionArray = [];
+    // Clear user inputs
+    playerInputs.emotionArray = [];
     playerInputs.verbArray = [];
     playerInputs.adjective1Array = [];
     playerInputs.nounArray = [];
-    playerInputs.adjective2Array =[];
-//i want the input boxes to reset after the code comes in 
-//and i want the poem to not show untill the user clicks to enter it and
-// i would like the button to change color when its hovered over
-//will possibly create more word templets to randomize within my code 
-//then i will fix up my css with pink cloud bac
-
-
+    playerInputs.adjective2Array = [];
 }
 
-
-
-
-
-
-
-//event listeners 
-const generateButton = document.getElementById('buttonGen'); 
-generateButton.addEventListener('click', generatePoem); 
-
-
-
-
-  
+// Event listener 
+const generateButton = document.getElementById('buttonGen');
+generateButton.addEventListener('click', generatePoem);

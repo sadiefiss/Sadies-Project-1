@@ -61,7 +61,7 @@ text-align: center;
 
 
 
-.flex button {
+.flex button:hover {
     font-size: 1rem;
     line-height: 1em;
     padding: 1.5rem;
@@ -86,3 +86,6 @@ main {
 
 
 
+#buttonGen:hover {
+backround-color: pink;
+}
