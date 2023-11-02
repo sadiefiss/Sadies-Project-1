@@ -1,91 +1,86 @@
-
-
 * {
     box-sizing: border-box;
-  border: 2px violet
 }
 
-
 body {
-
     min-height: 100vh;
-    background-color: plum;
+    background-color: pink;
     font-family: fantasy;
     font-size: 16px;
     display: flex;
-   align-items: center;
-   justify-content: center;
-   margin: 0;
-}  
- 
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
 .flex-parent {
     display: flex;
-    border: 3px purple dashed;
     width: 100%;
     justify-content: space-between;
-    flex-direction:column;
-    align-items: center;
-    padding: 24px;
-}
-
-
-.inner{
-    background-color: aqua;
-    width: 100%;
-    min-height: 100px;
-    text-align: center;
-}
-
-.wrapper {
-    display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-.flex ul {
-width: 100%;
-align-items: center;
-background-color: rgb(160, 221, 179); 
-     font-family: fantasy;
-    font-size: 20px 
-}
-
-
-h2 {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-font-style: oblique;
-text-align: center;
-
-}
-
-
-
-
-.flex button:hover {
-    font-size: 1rem;
-    line-height: 1em;
-    padding: 1.5rem;
-    background-color: rgb(255, 220, 239)
-    color paleturquoise;
-}
+    padding: 24px;
+    background-image: url('img/backround.jpeg');
+    background-size: cover;
+    border: 2px yellowgreen;
     
- 
-
-
-
- 
-
-
-main {
-    border:  solid 3px;
-    padding: 1rem;
-    max-width: 100%;
-    display: grid;
+    border-radius: 10px;
 }
 
+.inner {
+    background-color: aqua;
+    width: 50%;
+    min-height: 100px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.input {
+    background-color: rgb(160, 221, 179);
+    border-radius: 10px;
+}
+
+.input-item {
+    list-style: none; /* Remove bullets */
+    padding: 10px;
+}
+
+.input-instruction {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+}
+
+input[type="text"] {
+    border: none; /
+    border-radius: 15px; 
+    padding: 10px;
+    margin: 5px;
+}
+
+button {
+    background-color: pink;
+    border: none; 
+    border-radius: 15px; /* Apply border-radius to round the button */
+    color: rgb(238, 175, 226);
+    padding: 15px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: rgb(255, 220, 239); 
+    
+} 
 
 
-
-#buttonGen:hover {
-backround-color: pink;
+#poem-result { 
+    background-color: rgb(248, 166, 248, 0.7);
+    border: :2px greenyellow;
+  font-size: 24px;  
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  color: white;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
 }

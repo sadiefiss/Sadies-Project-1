@@ -1,9 +1,9 @@
 
 // Const - random word array
-const emotionWords = ["Disgust", "curious", "nostalgia", "passionate", "wonder"];
-const verbWords = ["provide", "laugh", "forget", "imagine", "dance"];
-const adjective1Words = ["secretive", "vibrant", "vapid", "whimsical", "grow"];
-const nounWords = ["Mcdonalds", "dreams", "John Stamos", "horse", "pants"];
+const emotionWords = ["sleepy", "curious", "nostalgia", "passion", "wonder"];
+const verbWords = ["provide", "laugh", "forget", "slink", "dance"];
+const adjective1Words = ["secretive", "vibrant", "domesticated", "whimsical", "hujungus"];
+const nounWords = ["Mcdonalds", "SnoopDog", "John Stamos", "Panties", "Obama"];
 const adjective2Words = ["bumpy", "fantastic", "glossy", "strong", "fluttery"];
 
 // Object for user inputs
@@ -48,7 +48,13 @@ function generatePoem() {
     // Array of poem templates
     const poems = [
         `I felt ${playerInputs.emotionArray[0]} as I watched myself ${playerInputs.verbArray[0]} down the ${playerInputs.adjective1Array[0]} path. A ${playerInputs.nounArray[0]} saw me on my way. It is the time of the season I can let myself be ${playerInputs.adjective2Array[0]}.`,
-        // Add more poem templates here
+        
+   ` In the midst of my ${emotion}, I ${verb} down the ${adjective1} beach. A ${noun} shared secrets, making me feel ${adjective2}.`,
+
+   `Looking up at  the ${emotion} moon, I began to ${verb} with ${adjective1} enthusiasm. My trusty ${noun} joined me on this ${adjective2} journey.` ,
+       
+    `With ${emotion} in my heart, I ${verb} through the ${adjective1} mountain. At the summit, I found a hidden ${noun} and experienced pure ${adjective2}.`,
+   // Add more poem templates here
     ];
 
     // Gen  random poem
@@ -73,4 +79,4 @@ function generatePoem() {
 
 // Event listener 
 const generateButton = document.getElementById('buttonGen');
-generateButton.addEventListener('click', generatePoem);
+generateButton.addEventListener('click', generatePoem); 
