@@ -1,10 +1,10 @@
 
 // Const - random word array
-const emotionWords = ["sleepy", "curious", "nostalgia", "passion", "wonder"];
-const verbWords = ["provide", "laugh", "forget", "slink", "dance"];
-const adjective1Words = ["secretive", "vibrant", "domesticated", "whimsical", "hujungus"];
-const nounWords = ["Mcdonalds", "SnoopDog", "John Stamos", "Panties", "Obama"];
-const adjective2Words = ["bumpy", "fantastic", "glossy", "strong", "fluttery"];
+const emotionWords = ["sleepy", "curious", "nostalgia", "passion", "trust", "guilt", "wonder"];
+const verbWords = ["provide", "laugh", "forget", "slink", "dance","skedaddle"];
+const adjective1Words = ["secretive", "vibrant", "domesticated", "whimsical", "hujungus","wild"];
+const nounWords = ["Mcdonalds", "SnoopDog", "John Stamos", "Panties", "Obama","tuba"];
+const adjective2Words = ["bumpy", "fantastic", "glossy", "strong", "fluttery", "ugly"];
 
 // Object for user inputs
 const playerInputs = {
@@ -54,7 +54,12 @@ function generatePoem() {
    `Looking up at  the ${emotion} moon, I began to ${verb} with ${adjective1} enthusiasm. My trusty ${noun} joined me on this ${adjective2} journey.` ,
        
     `With ${emotion} in my heart, I ${verb} through the ${adjective1} mountain. At the summit, I found a hidden ${noun} and experienced pure ${adjective2}.`,
-   // Add more poem templates here
+   
+   `A strong feeling of ${emotion} fills the air. I can only ${verb}  how we used to look for ${adjective1} rocks. I asked  you how the ${noun} had the ability to make you seem so ${adjective2} for your age.`,
+
+   `The ${emotion} I feel when I see a ${noun}. It makes my ${adjective1} soul want to ${verb}  the ${adjective2} sea.`,
+
+   `People say im ${adjective1} when I tell them im related to ${noun}, But I can ${verb} better than my ${noun} and that makes my ${adjective2} heart ${emotion}`,
     ];
 
     // Gen  random poem
@@ -77,6 +82,17 @@ function generatePoem() {
     playerInputs.adjective2Array = [];
 }
 
-// Event listener 
+// Event listener to generate poem 
 const generateButton = document.getElementById('buttonGen');
 generateButton.addEventListener('click', generatePoem); 
+
+
+//function to reset template
+
+function resetTemplate() {
+    location.reload();
+}
+
+// Event listener to Reset Template 
+const resetTemplateButton = document.getElementById('resetTemplateButton');
+resetTemplateButton.addEventListener('click', resetTemplate);
