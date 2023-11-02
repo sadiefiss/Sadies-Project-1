@@ -83,4 +83,22 @@ button:hover {
   color: white;
   font-family: "Arial", sans-serif;
   font-weight: bold;
+}  
+
+
+
+
+/* Define a CSS animation */
+.hint-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:  rgba(160, 221, 179, 0.4);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(234, 161, 224);
+    border-radius: 10px; 
+    cursor:  pointer;  
+    transition: transform 0.2s ease;
+}
+.hint-button:hover {
+  transform: scale(1.1);  
 }
