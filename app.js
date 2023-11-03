@@ -1,12 +1,13 @@
 
-// Const - random word array
+// Const - random word array 
+//the source in my code for generating the random words in the poem templates 
 const emotionWords = ["sleepy", "curious", "nostalgia", "passion", "trust", "guilt", "wonder"];
 const verbWords = ["provide", "laugh", "forget", "slink", "dance","skedaddle"];
 const adjective1Words = ["secretive", "vibrant", "domesticated", "whimsical", "hujungus","wild"];
 const nounWords = ["Mcdonalds", "SnoopDog", "John Stamos", "Panties", "Obama","tuba"];
 const adjective2Words = ["bumpy", "fantastic", "glossy", "strong", "fluttery", "ugly"];
 
-// Object for user inputs
+// Object for user inputs --contains the player enetred words
 const playerInputs = {
     emotionArray: [],
     verbArray: [],
@@ -15,13 +16,14 @@ const playerInputs = {
     adjective2Array: []
 };
 
-// Function  
+// Function  that selects a random word from word array above
 function getRandomWord(wordArray) {
     const randomIndex = Math.floor(Math.random() * wordArray.length);
     return wordArray[randomIndex];
 }
 
-// Function to display poem
+// Function to display poem retreives input from users with either a value from the user
+
 function generatePoem() {
     let emotion = document.getElementById('emotion').value;
     let verb = document.getElementById('verb').value;
@@ -29,7 +31,7 @@ function generatePoem() {
     let noun = document.getElementById('noun').value;
     let adjective2 = document.getElementById('adjective2').value;
 
-    
+    //or value from the radom word arrray if user input is empy
     if (!emotion || !verb || !adjective1 || !noun || !adjective2) {
         emotion = getRandomWord(emotionWords);
         verb = getRandomWord(verbWords);
@@ -45,7 +47,7 @@ function generatePoem() {
     playerInputs.nounArray.push(noun);
     playerInputs.adjective2Array.push(adjective2);
 
-    // Array of poem templates
+    // Array of poem templates the basis for generating actual poems
     const poems = [
         `I felt ${playerInputs.emotionArray[0]} as I watched myself ${playerInputs.verbArray[0]} down the ${playerInputs.adjective1Array[0]} path. A ${playerInputs.nounArray[0]} saw me on my way. It is the time of the season I can let myself be ${playerInputs.adjective2Array[0]}.`,
         
@@ -62,12 +64,13 @@ function generatePoem() {
    `People say im ${adjective1} when I tell them im related to ${noun}, But I can ${verb} better than my ${noun} and that makes my ${adjective2} heart ${emotion}`,
     ];
 
-    // Gen  random poem
+    // Gen  random poem template fills the templates with the player input gnerates
+    //and displays generated poem in the poem result 
     const poemNumber = Math.floor(Math.random() * poems.length);
     const poemResult = document.getElementById('poem-result');
     poemResult.textContent = poems[poemNumber];
 
-    // Reset input fields
+    // Resets the input fields
     document.getElementById('emotion').value = '';
     document.getElementById('verb').value = '';
     document.getElementById('adjective1').value = '';
@@ -87,12 +90,12 @@ const generateButton = document.getElementById('buttonGen');
 generateButton.addEventListener('click', generatePoem); 
 
 
-//function to reset template
+//function to reset  the  template
 
 function resetTemplate() {
     location.reload();
 }
 
-// Event listener to Reset Template 
+// Event listener to Reset the template  when player hits the reset button
 const resetTemplateButton = document.getElementById('resetTemplateButton');
 resetTemplateButton.addEventListener('click', resetTemplate);
